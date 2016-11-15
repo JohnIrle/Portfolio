@@ -71,16 +71,6 @@ body {
   padding-bottom: 50px;
 }
 
-#portfolio .panel {
-  opacity: 0.5;
-  margin: 0;
-  padding: 0;
-}
-
-#portfolio .panel:hover {
-  opacity: 1;
-}
-
 #portfolio img {
   margin: 0;
   padding: 0;
