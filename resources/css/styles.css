@@ -134,3 +134,7 @@ section:before {
 #portfolio img:hover {
   opacity: 1;
 }
+
+footer {
+  margin-bottom: 25px;
+}
