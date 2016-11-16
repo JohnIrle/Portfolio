@@ -139,20 +139,29 @@
 
   <section id="contact">
     <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <p class="lead">Contact me on the following sites.</p>
-        </div>
-        <div class="col-md-6">
-          <div class="social">
-            <ul>
-              <li><a href="https://twitter.com/irlejohn"><i class="fa fa-lg fa-twitter"></i></a></li>
-              <li><a href="github.com/doudeman"><i class="fa fa-lg fa-github"></i></a></li>
-              <li><a href="https://www.linkedin.com/in/johnirle"><i class="fa fa-lg fa-linkedin"></i></a></li>
-              <li><a href="http://stackoverflow.com/users/4778613/doudeman"><i class="fa fa-lg fa-stack-overflow"></i></a></li>
-            </ul>
-          </div>
-        </div>
+      <h2>Contact me</h2>
+      <p class="lead">Send me an Email</p>
+      <div id="form-messages"></div>
+      <form id="ajax-contact" method="post" action="mailer.php"> 
+        <div class="form-group"> 
+          <label for="name">Name:</label> 
+          <input type="text" class="form-control" id="name" name="name" required> <label for="email">Email</label> 
+          <input class="form-control" type="email" id="email" name="email" required>
+          <label for="message">Message:</label> 
+          <textarea class="form-control" id="message" name="message" required></textarea>  
+          <button class="btn"type="submit">Send</button> 
+        </div> 
+      </form>
+      <hr />
+      <p class="lead">Or contact me on these sites.</p>
+        
+      <div class="social">
+        <ul>
+          <li><a href="https://twitter.com/irlejohn"><i class="fa fa-lg fa-twitter"></i></a></li>
+          <li><a href="github.com/doudeman"><i class="fa fa-lg fa-github"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/johnirle"><i class="fa fa-lg fa-linkedin"></i></a></li>
+          <li><a href="http://stackoverflow.com/users/4778613/doudeman"><i class="fa fa-lg fa-stack-overflow"></i></a></li>
+        </ul>
       </div>
     </div>
   </section>
@@ -169,6 +178,7 @@
     </div>
   </footer>
   <script src="vendors/js/bootstrap.min.js"></script>
+  <script src="resources/data/app.js"></script>
 </body>
 
 </html>
