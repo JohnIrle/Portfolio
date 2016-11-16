@@ -12,7 +12,7 @@ $(function() {
     
     $.ajax({ 
       type: 'POST', 
-      url: $(form).attr('action'), 
+      url: 'mailer.php', 
       data: formData 
     }).done(function(response) { 
       // Make sure that the formMessages div has the 'success' class. 
