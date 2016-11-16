@@ -35,7 +35,7 @@ $(function() {
 		})
 		.fail(function(data) {
 			// Make sure that the formMessages div has the 'error' class.
-			$(formMessages).removeClass('success');
+			$(formMessages).removeClass('bg-success');
 			$(formMessages).addClass('bg-danger');
 
 			// Set the message text.
