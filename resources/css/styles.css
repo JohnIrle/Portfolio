@@ -122,6 +122,10 @@ section:before {
   border-radius: 50%;
 }
 
+.social i:hover {
+  color: darkorange;
+}
+
 .portfolio-item {
   margin-bottom: 25px; 
 }
