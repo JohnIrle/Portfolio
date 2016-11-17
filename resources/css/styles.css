@@ -80,11 +80,17 @@ section:before {
 }
 
 #portfolio img {
-  margin: 0;
+  margin: 10px 0 0 0;
   padding: 0;
   width: 525px;
   height: auto;
+  opacity: .75;
 }
+
+#portfolio img:hover {
+  opacity: 1;
+}
+
 
 #contact p {
   color: #111111;
