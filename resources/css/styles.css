@@ -91,11 +91,6 @@ section:before {
   opacity: 1;
 }
 
-
-#contact p {
-  color: #111111;
-}
-
 #contact ul li {
   display: inline-block;
 }
@@ -135,14 +130,3 @@ section:before {
 .portfolio-item {
   margin-bottom: 25px; 
 }
-
-#portfolio img {
-  margin-top: 10px;
-  opacity: .75;
-}
-
-#portfolio img:hover {
-  opacity: 1;
-}
-
-
