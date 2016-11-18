@@ -62,6 +62,7 @@ section:before {
 #about {
   margin-top: 50px;
   margin-bottom: 100px;
+  padding-top: 50px;
 }
 
 #contact {
