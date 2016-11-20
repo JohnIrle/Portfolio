@@ -4,19 +4,26 @@ body {
   width: 100%;
 }
 
-.text-center {
+/* vertical-centered text */
+
+.text-vcenter {
   display: table-cell;
+  text-align: center;
   vertical-align: middle;
 }
 
-.lead h1 {
+.text-vcenter h1 {
   font-size: 4.5em;
   font-weight: 700;
   margin: 0;
   padding: 0;
 }
 
-.text-center hr {
+.text-vcenter li {
+  display: inline;
+}
+
+.text-vcenter hr {
   width: 60%;
   margin-left: auto;
   margin-right: auto;
@@ -50,7 +57,6 @@ section:before {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
-  margin-bottom: auto;
 }
 
 #about {
@@ -84,8 +90,8 @@ section:before {
   opacity: 1;
 }
 
-.portfolio-item {
-  margin-bottom: 25px;
+#contact ul li {
+  display: inline-block;
 }
 
 .social {
@@ -120,3 +126,6 @@ section:before {
   color: darkorange;
 }
 
+.portfolio-item {
+  margin-bottom: 25px;
+}
