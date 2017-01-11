@@ -1,3 +1,8 @@
+html,body{
+  height: 100%;
+  width: 100%;
+}
+
 body {
   margin: 30px;
   background: url(http://i64.tinypic.com/wv2v5f.jpg);
