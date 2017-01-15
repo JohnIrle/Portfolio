@@ -129,3 +129,8 @@ section:before {
 .portfolio-item {
   margin-bottom: 25px;
 }
+
+#message {
+  resize: none;
+  margin-bottom: 5px;
+}
