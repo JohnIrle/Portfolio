@@ -105,10 +105,19 @@ var auth = [ "—Lao Tzu", "—Proverbs 29:18", "—Benjamin Disraeli",
 "—John Maxwell", "—Fuchan Yuan", "—Dee Dee Myers", "—Stephen King", "–Unknown",
 "–George Patton", "–Dwight Eisenhower", "–Dwight Eisenhower", "–Michael Jordan"];
 
+var ranQuote = "Generate a quote first";
+var ranAuth;
+
 $(document).ready(function() {
   $('.quote-btn').on('click', function(){
     var x = Math.floor(Math.random() * auth.length) + 1;
-    $('.quote').html(quote[x]);
-    $('.auth').html(auth[x]);
+    ranQuote = quote[x];
+    ranAuth = auth[x];
+    $('.quote').html(ranQuote);
+    $('.auth').html(ranAuth);
   });
+  $('#tweet').on("click", function(){
+    window.open("https://twitter.com/intent/tweet?text="+ranQuote);
+  });
+
 });
