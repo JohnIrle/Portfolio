@@ -38,7 +38,7 @@ section:before {
 }
 
 #home {
-  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(resources/img/home.jpg) no-repeat center center fixed;
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../img/home.jpg) no-repeat center center fixed;
   display: table;
   position: relative;
   height: 100%;

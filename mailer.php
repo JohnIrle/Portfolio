@@ -24,7 +24,7 @@
         $recipient = "irlejohn@gmail.com";
 
         // Set the email subject.
-        $subject = "New contact from $name";
+        $subject = "New Message from $name";
 
         // Build the email content.
         $email_content = "Name: $name\n";
@@ -32,7 +32,10 @@
         $email_content .= "Message:\n$message\n";
 
         // Build the email headers.
-        $email_headers = "From: 'johnirle.com' $name <$email>";
+        $email_headers = "From: contact@johnirle.com";
+        $email_header .= "Reply-To: contact@johnirle.com";
+        $email_header .= "Return-Path: contact@johnirle.com";
+
 
         // Send the email.
         if (mail($recipient, $subject, $email_content, $email_headers)) {
