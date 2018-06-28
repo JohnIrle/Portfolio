@@ -1,4 +1,4 @@
-# Porfolio Website
+# Portfolio Website
 
 A site built with bootstrap that has live examples of projects. A simple PHP script is used to handle the contact form. 
 
