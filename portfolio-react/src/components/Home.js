@@ -1,16 +1,12 @@
 import React from "react";
-import "../resources/img/JohnIrle.jpg";
+import profilepic from "../resources/img/JohnIrle.jpg";
 
 function Home(props) {
   return (
     <section id="home" className="home">
       <div className="text-vcenter">
         <div className="lead">
-          <img
-            className="profile-image"
-            src="../resources/img/JohnIrle.jpg"
-            alt="John Irle"
-          />
+          <img className="profile-image" src={profilepic} alt="John Irle" />
           <h1>John Irle</h1>
           <h2>Front-end Web Developer</h2>
           <hr />
