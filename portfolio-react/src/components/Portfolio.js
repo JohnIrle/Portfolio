@@ -1,4 +1,12 @@
 import React from "react";
+import PortfolioItem from "./PortfolioItem";
+import markdownPhoto from "../resources/img/markdown-lg.png";
+import twitchPhoto from "../resources/img/twitch-lg.png";
+import wikiPhoto from "../resources/img/wiki-lg.png";
+import quotePhoto from "../resources/img/quote-lg.png";
+import weatherPhoto from "../resources/img/weather-lg.png";
+import tributePhoto from "../resources/img/tribute-lg.png";
+import savingsPhoto from "../resources/img/financial.png";
 
 function Portfolio(prop) {
   return (
@@ -8,78 +16,53 @@ function Portfolio(prop) {
           <div className="col-lg-12">
             <h2 className="page-header text-center">Projects</h2>
           </div>
-          <div className="col-sm-4 col-xs-12">
-            <a href="http://johnirle.com/markdown">
-              <img
-                className="img-responsive portfolio-item"
-                src="resources/img/markdown.png"
-                alt="Markdown Previewer"
-              />
-            </a>
-          </div>
 
-          <div className="col-sm-4 col-xs-12">
-            <a href="http://johnirle.com/twitchstatus">
-              <img
-                className="img-responsive portfolio-item"
-                src="resources/img/twitch.png"
-                alt="Twitch Streamer Application"
-              />
-            </a>
-          </div>
+          <PortfolioItem
+            url="http://johnirle.com/markdown"
+            img={markdownPhoto}
+            desc="React Markdown Previewer"
+          />
 
-          <div className="col-sm-4 col-xs-12">
-            <a href="http://johnirle.com/wikipedia">
-              <img
-                className="img-responsive portfolio-item"
-                src="resources/img/wiki.png"
-                alt="Wikipedia Search Application"
-              />
-            </a>
-          </div>
+          <PortfolioItem
+            url="http://johnirle.com/twitchstatus"
+            img={twitchPhoto}
+            desc="Twitch Streamer status Application"
+          />
+
+          <PortfolioItem
+            url="http://johnirle.com/wikipedia"
+            img={wikiPhoto}
+            desc="Wikipedia Search Application"
+          />
         </div>
 
         <div className="row">
-          <div className="col-sm-4 col-xs-12">
-            <a href="http://johnirle.com/quote">
-              <img
-                className="img-responsive portfolio-item"
-                src="resources/img/quote.png"
-                alt="Random Quote Generator"
-              />
-            </a>
-          </div>
+          <PortfolioItem
+            url="http://johnirle.com/quote"
+            img={quotePhoto}
+            desc="Random Quote Generator"
+          />
 
-          <div className="col-sm-4 col-xs-12">
-            <a href="http://johnirle.com/weather">
-              <img
-                className="img-responsive portfolio-item"
-                src="resources/img/weather.png"
-                alt="Local Weather Application"
-              />
-            </a>
-          </div>
+          <PortfolioItem
+            url="http://johnirle.com/weather"
+            img={weatherPhoto}
+            desc="Local Weather Application"
+          />
 
-          <div className="col-sm-4 col-xs-12">
-            <a href="http://johnirle.com/tribute">
-              <img
-                className="img-responsive portfolio-item"
-                src="resources/img/tribute.png"
-                alt="Nikola Tesla Tribute Page"
-              />
-            </a>
-          </div>
+          <PortfolioItem
+            url="http://johnirle.com/tribute"
+            img={tributePhoto}
+            desc="Nikola Tesla Tribute Page"
+          />
         </div>
+
         <div className="row">
-          <div className="col-sm-4 col-sm-offset-4 col-xs-12">
-            <a href="http://johnirle.com/savings">
-              <img
-                className="img-responsive portfolio-item"
-                src="resources/img/financial.png"
-                alt="Financial Savings Form"
-              />
-            </a>
-          </div>
+          <PortfolioItem
+            offset="col-sm-4 col-sm-offset-4 col-xs-12"
+            url="http://johnirle.com/savings"
+            img={savingsPhoto}
+            desc="Financial Savings Widget"
+          />
         </div>
       </div>
     </section>
