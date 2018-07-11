@@ -1,17 +1,25 @@
 import React from "react";
+import propTypes from "prop-types";
 
 function PortfolioItem(props) {
   return (
-    <div className="col-sm-4 col-xs-12">
-      <a href={this.props.url}>
+    <div className={props.offset || "col-sm-4 col-xs-12"}>
+      <a href={props.url}>
         <img
           className="img-responsive portfolio-item"
-          src={this.props.img}
-          alt={this.props.alt}
+          src={props.img}
+          alt={props.desc}
         />
       </a>
     </div>
   );
 }
+
+PortfolioItem.propTypes = {
+  offset: propTypes.string,
+  url: propTypes.string.isRequired,
+  img: propTypes.string.isRequired,
+  desc: propTypes.string.isRequired
+};
 
 export default PortfolioItem;
