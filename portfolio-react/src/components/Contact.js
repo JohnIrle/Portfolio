@@ -5,14 +5,6 @@ function Contact(props) {
   return (
     <section id="contact">
       <div className="container">
-        <div className="row">
-          <div className="col-xs-12 col-sm-12 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
-            <h2>Contact me</h2>
-            <p className="lead">Send me an Email</p>
-
-            <div id="form-messages" />
-          </div>
-        </div>
         <ContactForm />
         <hr />
 
