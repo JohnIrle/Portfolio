@@ -9,7 +9,8 @@ class ContactForm extends React.Component {
       confetti: false,
       name: "",
       email: "",
-      message: ""
+      message: "",
+      responseMessage: ""
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -30,7 +31,11 @@ class ContactForm extends React.Component {
       body: new FormData(e.target)
     })
       .then(response => {
-        console.log(response);
+        response.text();
+      })
+      .then(data => {
+        console.log(data);
+        this.setState({ responseMessage: data });
       })
       .then(
         this.setState({
@@ -51,57 +56,69 @@ class ContactForm extends React.Component {
     };
 
     return (
-      <form id="ajax-contact" onSubmit={this.handleSubmit}>
-        <div className="form-group">
-          <div className="row">
-            <div className="form-group col-xs-12 col-sm-12 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 ">
-              <label htmlFor="name">Name:</label>
-              <input
-                type="text"
-                className="form-control"
-                id="name"
-                name="name"
-                value={this.state.name}
-                required
-                onChange={this.handleChange}
-              />
-            </div>
-          </div>
+      <div>
+        <div className="row">
+          <div className="col-xs-12 col-sm-12 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
+            <h2>Contact me</h2>
+            <p className="lead">Send me an Email</p>
 
-          <div className="row">
-            <div className="form-group col-xs-12 col-sm-12 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 ">
-              <label htmlFor="email">Email:</label>
-              <input
-                className="form-control"
-                type="email"
-                id="email"
-                name="email"
-                value={this.state.email}
-                required
-                onChange={this.handleChange}
-              />
-            </div>
-          </div>
-
-          <div className="row">
-            <div className="form-group col-xs-12 col-sm-12 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
-              <label htmlFor="message">Message:</label>
-              <textarea
-                className="form-control"
-                id="message"
-                name="message"
-                value={this.state.message}
-                required
-                onChange={this.handleChange}
-              />
-              <Confetti active={this.state.confetti} config={config} />
-              <button className="btn btn-default form-control" type="submit">
-                Send
-              </button>
+            <div id="form-messages" className="bg-success">
+              {this.state.responseMessage}
             </div>
           </div>
         </div>
-      </form>
+        <form id="ajax-contact" onSubmit={this.handleSubmit}>
+          <div className="form-group">
+            <div className="row">
+              <div className="form-group col-xs-12 col-sm-12 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 ">
+                <label htmlFor="name">Name:</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="name"
+                  name="name"
+                  value={this.state.name}
+                  required
+                  onChange={this.handleChange}
+                />
+              </div>
+            </div>
+
+            <div className="row">
+              <div className="form-group col-xs-12 col-sm-12 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 ">
+                <label htmlFor="email">Email:</label>
+                <input
+                  className="form-control"
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={this.state.email}
+                  required
+                  onChange={this.handleChange}
+                />
+              </div>
+            </div>
+
+            <div className="row">
+              <div className="form-group col-xs-12 col-sm-12 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
+                <label htmlFor="message">Message:</label>
+                <textarea
+                  className="form-control"
+                  id="message"
+                  name="message"
+                  value={this.state.message}
+                  required
+                  onChange={this.handleChange}
+                />
+                <Confetti active={this.state.confetti} config={config} />
+                <button className="btn btn-default form-control" type="submit">
+                  Send
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
     );
   }
 }
