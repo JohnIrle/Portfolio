@@ -5,26 +5,40 @@ class ContactForm extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = { confetti: false };
+    this.state = {
+      confetti: false,
+      name: "",
+      email: "",
+      message: ""
+    };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleChange() {}
+  handleChange(e) {
+    this.setState({ [e.target.name]: e.target.value });
+  }
 
   handleSubmit(e) {
     e.preventDefault();
 
     this.setState({ confetti: true });
-    const data = new FormData(e.target);
 
-    // fetch("../mailer.php", {
-    //   method: "post",
-    //   body: data
-    // });
-
-    console.log(data);
+    fetch("http://johnirle.com/mailer.php", {
+      method: "POST",
+      body: new FormData(e.target)
+    })
+      .then(response => {
+        console.log(response);
+      })
+      .then(
+        this.setState({
+          name: "",
+          email: "",
+          message: ""
+        })
+      );
   }
 
   render() {
@@ -47,7 +61,9 @@ class ContactForm extends React.Component {
                 className="form-control"
                 id="name"
                 name="name"
+                value={this.state.name}
                 required
+                onChange={this.handleChange}
               />
             </div>
           </div>
@@ -60,7 +76,9 @@ class ContactForm extends React.Component {
                 type="email"
                 id="email"
                 name="email"
+                value={this.state.email}
                 required
+                onChange={this.handleChange}
               />
             </div>
           </div>
@@ -72,7 +90,9 @@ class ContactForm extends React.Component {
                 className="form-control"
                 id="message"
                 name="message"
+                value={this.state.message}
                 required
+                onChange={this.handleChange}
               />
               <Confetti active={this.state.confetti} config={config} />
               <button className="btn btn-default form-control" type="submit">
