@@ -62,3 +62,5 @@ typings/
 .DS_Store
 resources/img
 portfolio-react
+
+src/resources/img
