@@ -1,0 +1,137 @@
+html,
+body {
+  margin-top: 50px;
+  height: 100%;
+  width: 100%;
+}
+
+/* vertical-centered text */
+
+.text-vcenter {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.text-vcenter h1 {
+  font-size: 4.5em;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+
+.text-vcenter li {
+  display: inline;
+}
+
+.text-vcenter hr {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+section:before {
+  display: block;
+  content: " ";
+  margin-top: -258px;
+  height: 285px;
+  visibility: hidden;
+}
+
+#home {
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(./resources/img/home.jpg) no-repeat center center fixed;
+  display: table;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.profile-image {
+  width: 200px;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 50px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+
+#about {
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+#contact {
+  background-color: #ffffff;
+  padding: 100px 0 100px 0;
+}
+
+#portfolio {
+  background-color: #eee;
+  display: table;
+  position: relative;
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 150px;
+}
+
+#portfolio img {
+  margin: 10px 0 0 0;
+  padding: 0;
+  width: 525px;
+  height: auto;
+  opacity: .75;
+}
+
+#portfolio img:hover {
+  opacity: 1;
+}
+
+#contact ul li {
+  display: inline-block;
+}
+
+.social {
+  margin: 0;
+  padding: 0;
+}
+
+.social ul {
+  margin: 0;
+  padding: 5px;
+}
+
+.social ul li {
+  margin: 5px;
+  list-style: none outside none;
+}
+
+.social i {
+  width: 40px;
+  height: 40px;
+  color: #FFF;
+  background-color: #909AA0;
+  font-size: 22px;
+  text-align: center;
+  padding-top: 12px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.social i:hover {
+  color: darkorange;
+}
+
+.portfolio-item {
+  margin-bottom: 25px;
+}
+
+#message {
+  resize: none;
+  margin-bottom: 5px;
+}
