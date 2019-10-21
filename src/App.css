@@ -110,7 +110,7 @@ section:before {
   list-style: none outside none;
 }
 
-.social i {
+.socialItem {
   width: 40px;
   height: 40px;
   color: #FFF;
@@ -123,7 +123,7 @@ section:before {
   border-radius: 50%;
 }
 
-.social i:hover {
+.social:hover {
   color: darkorange;
 }
 
