@@ -8,7 +8,7 @@ function Home(props) {
     <section id="home" className="home">
       <div style={{ textAlign: "center", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", paddingTop: "14vh" }}>
         <img className="profile-image" src={JohnIrle} alt="John Irle" />
-        <h1>John Irle</h1>
+        <h1 style={{ fontSize: "4.5em", fontWeight: 700 }} > John Irle</h1>
         <h2>Web Development, Programming, and Cyber Security</h2>
         <hr />
         <Card style={{ width: "20rem", margin: "auto" }}>
