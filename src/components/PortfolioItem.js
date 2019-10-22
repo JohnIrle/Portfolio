@@ -1,12 +1,13 @@
 import React from 'react';
+import { Col, Image } from 'react-bootstrap'
 
 function PortfolioItem(props) {
   return (
-    <div className="col-sm-4 col-xs-12">
-      <a href={props.url}>
-        <img className="img-responsive portfolio-item" src={props.img} alt="props.alt" />
-      </a>
-    </div>
+    <Col span={"auto"} lg={true}>
+      < a href={props.url} >
+        <Image src={props.img} alt="props.alt" fluid />
+      </a >
+    </Col >
   );
 }
 
