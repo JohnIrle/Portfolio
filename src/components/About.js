@@ -5,19 +5,18 @@ function About(props) {
     <section id="about">
       <div className="container">
         <h2>About</h2>
-        <p className="lead">I'm a Front-end web developer, constantly learning everyday.</p>
-        <p className="lead">
-          I use CSS 3, Html 5, and javaScript to build interactive web applications.
-      </p>
+        <p class="lead">
+          I'm a Computer Science Graduate Student and Freelance web developer.
 
-        <p className="lead">
-          My focus is on React, Express, Node, and MongoDB.
-      </p>
+          My interests include web development, cyber security and machine learning.
+        </p>
 
-        <p className="lead">Web Development has always been an interest of mine and I’m on my way to making it my dream job.</p>
+        <p class="lead">
+          My focus is on JavaScript(React, Express, Node, MongoDB), and Python.
+        </p>
 
-        <p className="lead">Want to work together? I would love to hear from you.
-      </p>
+        <p class="lead">Want to work together? I would love to hear from you.
+        </p>
       </div>
     </section>
   );
