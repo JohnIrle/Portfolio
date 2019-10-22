@@ -1,5 +1,7 @@
 import React from 'react';
 
+import SocialIcons from "./SocialIcons";
+
 class Contact extends React.Component {
   render() {
     return (
@@ -42,15 +44,7 @@ class Contact extends React.Component {
 
           <p className="lead">Or contact me on these sites.</p>
 
-          <div className="social">
-            <ul>
-              <li><a href="https://twitter.com/irlejohn"><i className="fa fa-lg fa-twitter"></i></a></li>
-              <li><a href="http://github.com/doudeman"><i className="fa fa-lg fa-github"></i></a></li>
-              <li><a href="https://www.linkedin.com/in/johnirle"><i className="fa fa-lg fa-linkedin"></i></a></li>
-              <li><a href="http://stackoverflow.com/users/4778613/doudeman"><i className="fa fa-lg fa-stack-overflow"></i></a></li>
-              <li><a href="https://www.freecodecamp.com/johnirle"><i className="fa fa-lg fa-free-code-camp"></i></a></li>
-            </ul>
-          </div>
+          <SocialIcons />
         </div>
       </section>
 
