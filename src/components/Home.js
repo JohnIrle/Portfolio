@@ -9,7 +9,7 @@ function Home(props) {
       <div style={{ textAlign: "center", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", paddingTop: "14vh" }}>
         <img className="profile-image" src={JohnIrle} alt="John Irle" />
         <h1>John Irle</h1>
-        <h2>Web Developer and Programmer</h2>
+        <h2>Web Development, Programming, and Cyber Security</h2>
         <hr />
         <Card style={{ width: "20rem", margin: "auto" }}>
           <SocialIcons />
