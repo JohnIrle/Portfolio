@@ -1,9 +1,40 @@
 import React from 'react';
+import Axios from 'axios';
 import { Button, Container, Form, Row, Col } from "react-bootstrap"
 
 import SocialIcons from "./SocialIcons";
 
 class Contact extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: '',
+      email: '',
+      message: '',
+      mailSent: false,
+      error: null
+    }
+    this.handleFormSubmit = this.handleFormSubmit.bind(this);
+  }
+
+  handleFormSubmit(event) {
+    event.preventDefault();
+    Axios({
+      method: 'post',
+      url: './mailer.php',
+      data: this.state
+    })
+      .then(result => {
+        this.setState({
+          mailSent: result.data.sent,
+          name: '',
+          email: '',
+          message: ''
+        })
+      })
+      .catch(error => this.setState({ error: error.message }))
+  }
+
   render() {
     return (
       <section id="contact">
@@ -13,7 +44,11 @@ class Contact extends React.Component {
               <h2>Contact me</h2>
               <p className="lead">Send me an Email</p>
 
-              <div id="form-messages"></div>
+              <div>
+                {this.state.mailSent &&
+                  <div>Thank you for contacting me.</div>
+                }
+              </div>
             </Col>
 
           </Row>
@@ -21,16 +56,25 @@ class Contact extends React.Component {
             <Form.Group>
 
               <Form.Label>Name:</Form.Label>
-              <Form.Control type="text" id="name" name="name" required />
+              <Form.Control type="text" id="name" name="name" required
+                value={this.state.name}
+                onChange={e => this.setState({ name: e.target.value })}
+              />
 
 
-              <Form.Label for="email">Email:</Form.Label>
-              <Form.Control type="email" id="email" name="email" required />
+              <Form.Label>Email:</Form.Label>
+              <Form.Control type="email" id="email" name="email" required
+                value={this.state.email}
+                onChange={e => this.setState({ email: e.target.value })}
+              />
 
 
-              <Form.Label for="message">Message:</Form.Label>
-              <Form.Control as="textarea" id="message" name="message" required />
-              <Button variant="secondary" type="submit">Send</Button>
+              <Form.Label>Message:</Form.Label>
+              <Form.Control as="textarea" id="message" name="message" required
+                value={this.state.message}
+                onChange={e => this.setState({ message: e.target.value })}
+              />
+              <Button variant="secondary" type="submit" onClick={e => this.handleFormSubmit(e)}>Send</Button>
 
             </Form.Group>
           </Form>
