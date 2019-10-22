@@ -2,7 +2,9 @@
     // My modifications to mailer script from:
     // http://blog.teamtreehouse.com/create-ajax-contact-form
     // Added input sanitizing to prevent injection
-
+    header("Access-Control-Allow-Origin: *");
+    $rest_json = file_get_contents("php://input");
+    $_POST = rson_decode($rest_json, true);
     // Only process POST reqeusts.
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Get the form fields and remove whitespace.
