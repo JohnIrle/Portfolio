@@ -1,5 +1,5 @@
 import React from 'react';
-import Axios from 'axios';
+import axios from 'axios';
 import { Button, Container, Form, Row, Col } from "react-bootstrap"
 
 import SocialIcons from "./SocialIcons";
@@ -19,9 +19,9 @@ class Contact extends React.Component {
 
   handleFormSubmit(event) {
     event.preventDefault();
-    Axios({
+    axios({
       method: 'post',
-      url: './mailer.php',
+      url: 'mailer.php',
       data: this.state
     })
       .then(result => {
