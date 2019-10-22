@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
 
-function About(props) {
+function About() {
   return (
     <section id="about">
       <Container>
