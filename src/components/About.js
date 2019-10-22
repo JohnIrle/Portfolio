@@ -1,9 +1,10 @@
 import React from 'react';
+import { Container } from 'react-bootstrap';
 
 function About(props) {
   return (
     <section id="about">
-      <div className="container">
+      <Container>
         <h2>About</h2>
         <p class="lead">
           I'm a Computer Science Graduate Student and Freelance web developer.
@@ -17,7 +18,7 @@ function About(props) {
 
         <p class="lead">Want to work together? I would love to hear from you.
         </p>
-      </div>
+      </Container>
     </section>
   );
 }
