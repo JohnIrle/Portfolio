@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button, Container, Form, Row, Col } from "react-bootstrap"
 
 import SocialIcons from "./SocialIcons";
 
@@ -6,46 +7,40 @@ class Contact extends React.Component {
   render() {
     return (
       <section id="contact">
-        <div className="container">
-          <div className="row">
-            <div className="col-xs-12 col-sm-12 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
+        <Container>
+          <Row>
+            <Col className="text-center">
               <h2>Contact me</h2>
               <p className="lead">Send me an Email</p>
 
               <div id="form-messages"></div>
-            </div>
+            </Col>
 
-          </div>
-          <form id="ajax-contact" method="post" action="mailer.php">
-            <div className="form-group">
-              <div className="row">
-                <div className="form-group col-xs-12 col-sm-12 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 ">
-                  <label for="name">Name:</label>
-                  <input type="text" className="form-control" id="name" name="name" required />
-                </div>
-              </div>
-              <div className="row">
-                <div className="form-group col-xs-12 col-sm-12 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 ">
-                  <label for="email">Email:</label>
-                  <input className="form-control" type="email" id="email" name="email" required />
-                </div>
-              </div>
-              <div className="row">
-                <div className="form-group col-xs-12 col-sm-12 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
-                  <label for="message">Message:</label>
-                  <textarea className="form-control" id="message" name="message" required></textarea>
-                  <button className="btn btn-default form-control" type="submit">Send</button>
-                </div>
-              </div>
-            </div>
-          </form>
+          </Row>
+          <Form id="ajax-contact" method="post" action="mailer.php">
+            <Form.Group>
+
+              <Form.Label>Name:</Form.Label>
+              <Form.Control type="text" id="name" name="name" required />
+
+
+              <Form.Label for="email">Email:</Form.Label>
+              <Form.Control type="email" id="email" name="email" required />
+
+
+              <Form.Label for="message">Message:</Form.Label>
+              <Form.Control as="textarea" id="message" name="message" required />
+              <Button variant="secondary" type="submit">Send</Button>
+
+            </Form.Group>
+          </Form>
 
           <hr />
 
           <p className="lead">Or contact me on these sites.</p>
 
           <SocialIcons />
-        </div>
+        </Container>
       </section>
 
     )
