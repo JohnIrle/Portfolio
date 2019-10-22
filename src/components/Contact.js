@@ -49,6 +49,11 @@ class Contact extends React.Component {
                   <div>Thank you for contacting me.</div>
                 }
               </div>
+              <div>
+                {this.state.error &&
+                  <div>{this.state.error}</div>
+                }
+              </div>
             </Col>
 
           </Row>
