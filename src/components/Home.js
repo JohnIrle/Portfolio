@@ -1,7 +1,7 @@
 import React from 'react';
 import JohnIrle from "../resources/img/blazer.jpg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTwitter, faGithub, faLinkedin, faStackOverflow, faFreeCodeCamp, faGit } from '@fortawesome/free-brands-svg-icons';
+import { faTwitter, faGithub, faLinkedin, faStackOverflow, faFreeCodeCamp } from '@fortawesome/free-brands-svg-icons';
 
 function Home(props) {
   return (
