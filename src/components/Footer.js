@@ -5,7 +5,7 @@ function Footer(props) {
     <footer className="footer">
       <div className="container">
         <div className="navbar-text pull-left">
-          <p>Copyright &copy; John Irle 2019</p>
+          <p>Copyright &copy; John Irle 2020</p>
         </div>
       </div>
     </footer>
