@@ -22,18 +22,22 @@ const Contact = (props) => {
     error
   } = formData;
 
-  const handleFormSubmit = async (e) => {
+  const onChange = e =>
+    setFormData({ ...formData, [e.target.name]: e.target.value })
+
+  const onSubmit = async (e) => {
     e.preventDefault();
     try {
       const result = await axios.post("mailer.php", formData)
       setFormData({
+        ...formData,
         mailSent: result.data.sent,
         name: '',
         email: '',
         message: ''
       })
     } catch (error) {
-      setFormData({ error: error.message })
+      setFormData({ ...formData, error: error.message })
     }
   }
 
@@ -58,29 +62,29 @@ const Contact = (props) => {
           </Col>
 
         </Row>
-        <Form id="ajax-contact" method="post" action="mailer.php">
+        <Form id="ajax-contact" onSubmit={onSubmit}>
           <Form.Group>
 
             <Form.Label>Name:</Form.Label>
             <Form.Control type="text" id="name" name="name" required
               value={name}
-              onChange={e => setFormData({ name: e.target.value })}
+              onChange={onChange}
             />
 
 
             <Form.Label>Email:</Form.Label>
             <Form.Control type="email" id="email" name="email" required
               value={email}
-              onChange={e => setFormData({ email: e.target.value })}
+              onChange={onChange}
             />
 
 
             <Form.Label>Message:</Form.Label>
             <Form.Control as="textarea" id="message" name="message" required
               value={message}
-              onChange={e => setFormData({ message: e.target.value })}
+              onChange={onChange}
             />
-            <Button variant="secondary" type="submit" onClick={e => handleFormSubmit(e)}>Send</Button>
+            <Button variant="secondary" type="submit">Send</Button>
 
           </Form.Group>
         </Form>
