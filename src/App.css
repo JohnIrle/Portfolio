@@ -1,74 +1,82 @@
 body {
-  padding-top: .5rem;
+    padding-top: 0.5rem;
 }
 
 #home {
-  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(./resources/img/home.jpg) no-repeat center center fixed;
-  position: relative;
-  height: 100vh;
-  width: 100vw;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  height: 100vh;
-  width: 100vw;
+    background: linear-gradient(
+            rgba(255, 255, 255, 0.5),
+            rgba(255, 255, 255, 0.5)
+        ),
+        url(./resources/img/home.jpg) no-repeat center center fixed;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
 }
 
 .profile-image {
-  width: 200px;
-  height: auto;
-  border-radius: 50%;
-  margin-bottom: 50px;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 50px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.portfolio-items-link {
+    margin-left: 4%;
 }
 
 #about {
-  padding-top: 100px;
-  padding-bottom: 100px;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 #contact {
-  background-color: #ffffff;
-  padding: 100px 0 100px 0;
+    background-color: #ffffff;
+    padding: 100px 0 100px 0;
 }
 
 #portfolio {
-  background-color: #eee;
-  display: table;
-  position: relative;
-  width: 100%;
-  padding-top: 50px;
-  padding-bottom: 150px;
+    background-color: #eee;
+    display: table;
+    position: relative;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 150px;
 }
 
 #portfolio img {
-  opacity: .75;
+    opacity: 0.75;
 }
 
 #portfolio img:hover {
-  opacity: 1;
+    opacity: 1;
 }
 
 .social {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .social ul {
-  margin: 0;
-  padding: 5px;
+    margin: 0;
+    padding: 5px;
 }
 
 .social ul li {
-  margin: 5px;
-  list-style: none outside none;
-  display: inline-block;
+    margin: 5px;
+    list-style: none outside none;
+    display: inline-block;
 }
 
 #message {
-  resize: none;
-  margin-bottom: 5px;
+    resize: none;
+    margin-bottom: 5px;
 }
