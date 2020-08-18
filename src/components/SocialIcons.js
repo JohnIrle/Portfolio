@@ -39,7 +39,7 @@ function SocialIcons(props) {
                         />
                     </a>
                 </li>
-                <li>
+                {/* <li>
                     <a href="http://stackoverflow.com/users/4778613/doudeman">
                         <FontAwesomeIcon
                             icon={faStackOverflow}
@@ -47,8 +47,8 @@ function SocialIcons(props) {
                             color="#f48024"
                         />
                     </a>
-                </li>
-                <li>
+                </li> */}
+                {/* <li>
                     <a href="https://www.freecodecamp.com/johnirle">
                         <FontAwesomeIcon
                             icon={faFreeCodeCamp}
@@ -56,7 +56,7 @@ function SocialIcons(props) {
                             color="#006400"
                         />
                     </a>
-                </li>
+                </li> */}
             </ul>
         </div>
     );
