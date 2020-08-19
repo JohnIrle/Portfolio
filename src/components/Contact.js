@@ -90,7 +90,7 @@ const Contact = (props) => {
                 <hr />
 
                 <p className="lead">Or contact me on these sites.</p>
-                <div style={{ width: "15%" }}>
+                <div style={{ width: "15%", marginLeft: "2rem" }}>
                     <SocialIcons />
                 </div>
             </Container>
