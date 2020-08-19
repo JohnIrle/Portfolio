@@ -4,8 +4,6 @@ import {
     faTwitter,
     faGithub,
     faLinkedin,
-    faStackOverflow,
-    faFreeCodeCamp,
 } from "@fortawesome/free-brands-svg-icons";
 
 function SocialIcons(props) {
@@ -39,24 +37,6 @@ function SocialIcons(props) {
                         />
                     </a>
                 </li>
-                {/* <li>
-                    <a href="http://stackoverflow.com/users/4778613/doudeman">
-                        <FontAwesomeIcon
-                            icon={faStackOverflow}
-                            size="2x"
-                            color="#f48024"
-                        />
-                    </a>
-                </li> */}
-                {/* <li>
-                    <a href="https://www.freecodecamp.com/johnirle">
-                        <FontAwesomeIcon
-                            icon={faFreeCodeCamp}
-                            size="2x"
-                            color="#006400"
-                        />
-                    </a>
-                </li> */}
             </ul>
         </div>
     );
