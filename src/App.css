@@ -8,22 +8,24 @@ body {
             rgba(255, 255, 255, 0.5)
         ),
         url(./resources/img/home.jpg) no-repeat center center fixed;
-    position: relative;
-    height: 100vh;
-    width: 100vw;
+    height: 60vh;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    height: 70vh;
-    width: 100vw;
+}
+
+@media (max-width: 600px) {
+    #home {
+        height: 100vh;
+    }
 }
 
 .profile-image {
     width: 200px;
     height: auto;
     border-radius: 50%;
-    margin-bottom: 50px;
+    margin-bottom: 1rem;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
