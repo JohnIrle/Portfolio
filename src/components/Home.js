@@ -17,7 +17,7 @@ function Home(props) {
             >
                 <img className="profile-image" src={JohnIrle} alt="John Irle" />
                 <h1 className="display-3 mt-1"> John Irle</h1>
-                <h2>Web Development, Programming, and Cyber Security</h2>
+                <h2>Web Development, Programming, and Cybersecurity</h2>
                 <hr />
                 <div
                     style={{
