@@ -1,24 +1,24 @@
-import React, { Fragment } from 'react';
+import React from 'react';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+
 import './App.css';
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
 
 import NavBar from "./components/NavBar";
 import Home from "./components/Home";
-import About from "./components/About";
-import Projects from "./components/Projects";
-import Contact from "./components/Contact";
+import FourOhFour from "./components/FourOhFour";
 import Footer from "./components/Footer";
 
 function App() {
   return (
-    <Fragment>
+    <Router>
       <NavBar />
-      <Home />
-      <About />
-      <Projects />
-      <Contact />
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route component={FourOhFour} /> 
+      </Switch>
       <Footer />
-    </Fragment>
+    </Router>
   );
 }
 
