@@ -15,11 +15,6 @@ body {
     background-size: cover;
 }
 
-@media (max-width: 600px) {
-    #home {
-        height: 65vh;
-    }
-}
 
 .profile-image {
     width: 200px;
@@ -71,4 +66,13 @@ body {
 #message {
     resize: none;
     margin-bottom: 5px;
+}
+
+@media (max-width: 600px) {
+    #home {
+        height: 100vh;
+    }
+    .profile-image {
+        width: 150px;
+    }
 }
