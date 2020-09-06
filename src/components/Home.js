@@ -1,37 +1,19 @@
-import React from "react";
-import JohnIrle from "../resources/img/blazer.jpg";
-import SocialIcons from "./SocialIcons";
+import React from 'react';
+import Header from "./Header";
+import About from "./About";
+import Projects from "./Projects"; 
+import Contact from "./Contact";
+import Footer from "./Footer";
 
-function Home(props) {
+const Wrapper = () => {
     return (
-        <section id="home" className="home">
-            <div
-                style={{
-                    textAlign: "center",
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    paddingTop: "5rem",
-                }}
-            >
-                <img className="profile-image" src={JohnIrle} alt="John Irle" />
-                <h1 className="display-3 mt-1"> John Irle</h1>
-                <h2>Web Development, Programming, and Cybersecurity</h2>
-                <hr />
-                <div
-                    style={{
-                        width: "12rem",
-                        margin: "auto",
-                        backgroundColor: "white",
-                        borderRadius: "5px",
-                    }}
-                >
-                    <SocialIcons />
-                </div>
-            </div>
-        </section>
-    );
+        <>
+            <Header />
+            <About />
+            <Projects /> 
+            <Contact />
+        </>
+    )
 }
 
-export default Home;
+export default Wrapper;
