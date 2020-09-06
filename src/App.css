@@ -4,10 +4,10 @@ body {
 
 #home {
     background: linear-gradient(
-            rgba(255, 255, 255, 0.5),
-            rgba(255, 255, 255, 0.5)
+            rgba(255, 255, 255, 0.01),
+            rgba(255, 255, 255, 0.01)
         ),
-        url(./resources/img/home.jpg) no-repeat center center fixed;
+        url(./resources/img/trianglify.png) no-repeat, center, fixed ;
     height: 60vh;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -17,7 +17,7 @@ body {
 
 @media (max-width: 600px) {
     #home {
-        height: 100vh;
+        height: 65vh;
     }
 }
 
