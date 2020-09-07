@@ -1,8 +1,16 @@
 import React from "react";
 import { Card, Button } from "react-bootstrap";
-import PropTypes from "prop-types";
 
-export default function ProjectCard({ title, description, github, url, img }) {
+interface ProjectCardProps {
+    title: string;
+    description: string;
+    github?: string;
+    url: string;
+    img?: string;
+    alt?: string;
+}
+    
+const ProjectCard:React.FC<ProjectCardProps> = ({ title, description, github, url, img }) => {
     return (
         <div className="col-lg d-flex align-items-stretch m-1">
             <Card>
@@ -28,9 +36,5 @@ export default function ProjectCard({ title, description, github, url, img }) {
     );
 }
 
-ProjectCard.propTypes = {
-    title: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    github: PropTypes.string,
-    url: PropTypes.string,
-};
+export default ProjectCard;
+

@@ -6,7 +6,7 @@ import {
     faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 
-function SocialIcons(props) {
+function SocialIcons() {
     return (
         <div className="social">
             <ul className="inline">

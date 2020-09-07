@@ -4,7 +4,7 @@ import About from "./About";
 import Projects from "./Projects"; 
 import Contact from "./Contact";
 
-const Wrapper = () => {
+const Home = () => {
     return (
         <>
             <Header />
@@ -15,4 +15,4 @@ const Wrapper = () => {
     )
 }
 
-export default Wrapper;
+export default Home;

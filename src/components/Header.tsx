@@ -2,7 +2,7 @@ import React from "react";
 import JohnIrle from "../resources/img/blazer.jpg";
 import SocialIcons from "./SocialIcons";
 
-function Home(props) {
+function Header() {
     return (
         <section id="home" className="home">
             <div
@@ -34,4 +34,4 @@ function Home(props) {
     );
 }
 
-export default Home;
+export default Header;

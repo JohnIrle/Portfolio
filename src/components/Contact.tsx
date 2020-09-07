@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { Button, Container, Form, Row, Col } from "react-bootstrap";
+import {  Container, Row, Col } from "react-bootstrap";
 
 import SocialIcons from "./SocialIcons";
 
-const Contact = (props) => {
+const Contact = () => {
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -15,10 +15,12 @@ const Contact = (props) => {
 
     const { name, email, message, mailSent, error } = formData;
 
-    const onChange = (e) =>
-        setFormData({ ...formData, [e.target.name]: e.target.value });
+    const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const {name, value} = e.currentTarget;
+        setFormData({ ...formData, [name]: value });
+    }
 
-    const onSubmit = async (e) => {
+    const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         try {
             const result = await axios.post("mailer.php", formData);
@@ -50,11 +52,11 @@ const Contact = (props) => {
                         <div>{error && <div>{error}</div>}</div>
                     </Col>
                 </Row>
-                <Form id="ajax-contact" onSubmit={onSubmit}>
-                    <Form.Group>
-                        <Form.Label>Name:</Form.Label>
-                        <Form.Control
-                            type="text"
+                <form id="ajax-contact" onSubmit={onSubmit}>
+                    <div className="form-group">
+                        <label htmlFor="name">Name:</label>
+                        <input
+                            className="form-control"                           
                             id="name"
                             name="name"
                             required
@@ -62,9 +64,9 @@ const Contact = (props) => {
                             onChange={onChange}
                         />
 
-                        <Form.Label>Email:</Form.Label>
-                        <Form.Control
-                            type="email"
+                        <label htmlFor="email">Email:</label>
+                        <input
+                            className="form-control"
                             id="email"
                             name="email"
                             required
@@ -72,20 +74,21 @@ const Contact = (props) => {
                             onChange={onChange}
                         />
 
-                        <Form.Label>Message:</Form.Label>
-                        <Form.Control
-                            as="textarea"
+                        <label htmlFor="message">Message:</label>
+                        <input
+                            type="textarea"
+                            className="form-control"
                             id="message"
                             name="message"
                             required
                             value={message}
                             onChange={onChange}
                         />
-                        <Button variant="secondary" type="submit">
+                        <button className="btn btn-secondary" type="submit">
                             Send
-                        </Button>
-                    </Form.Group>
-                </Form>
+                        </button>
+                    </div>
+                </form>
 
                 <hr />
 
