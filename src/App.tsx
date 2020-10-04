@@ -6,7 +6,6 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 import NavBar from "./components/NavBar";
 import Home from "./components/Home";
-import Uses from "./components/Uses";
 import FourOhFour from "./components/FourOhFour";
 import Footer from "./components/Footer";
 
@@ -16,7 +15,6 @@ function App() {
       <NavBar />
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route exact path="/uses" component={Uses} />
         <Route component={FourOhFour} />
       </Switch>
       <Footer />

@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar, Nav } from "react-bootstrap"
+import { Navbar, Nav } from "react-bootstrap";
 
 function NavBar() {
   return (
@@ -12,7 +12,7 @@ function NavBar() {
           <Nav.Link href="#about">About</Nav.Link>
           <Nav.Link href="#portfolio">Portfolio</Nav.Link>
           <Nav.Link href="#contact">Contact</Nav.Link>
-          <Nav.Link href="http://johnirle.com/blog/" >Blog</Nav.Link>
+          <Nav.Link href="http://johnirle.com/blog/">Blog</Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
