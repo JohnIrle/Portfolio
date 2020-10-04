@@ -1,11 +1,12 @@
-import React from 'react';
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-import './App.css';
-import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
+import "./App.css";
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 import NavBar from "./components/NavBar";
 import Home from "./components/Home";
+import Uses from "./components/Uses";
 import FourOhFour from "./components/FourOhFour";
 import Footer from "./components/Footer";
 
@@ -15,7 +16,8 @@ function App() {
       <NavBar />
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route component={FourOhFour} /> 
+        <Route exact path="/uses" component={Uses} />
+        <Route component={FourOhFour} />
       </Switch>
       <Footer />
     </Router>
